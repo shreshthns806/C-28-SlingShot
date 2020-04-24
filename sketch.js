@@ -17,7 +17,7 @@ function setup(){
     //Create first bird, filling the once empty array.
         bird[count] = new Bird(100,100);
     //Constraint bird with a point.
-        sling = new slingShot(bird[count].body,{x:140,y:100});
+        sling = new slingShot(bird[count].body,{x:200,y:100});
     //Create 3 platforms, on whic to place boxes.
         ground1 = new Ground(900,200,100,10)
         ground2 = new Ground(400,300,150,10)
@@ -79,7 +79,13 @@ function draw(){
         Engine.update(engine);
     //Write instruction text for user
         strokeWeight(4);
+        textSize(30);
         text("Drag and Release to throw Box",15,25)
+        text("If on Mobile, Drag and Release",15,50)
+        text("This works like a catapult",15,100);
+        text("The direction in which you drag, will be like pulling a rubberband",15,130)
+        text("The box is on the rubberband. So it will be launched in the opposite direction",15,155)
+        text("Created by Shreshth Narayan Singh",600,350)
     //Use a for loop to display the bird array
         for(i=0;i<count;i++){
             bird[i].display();
