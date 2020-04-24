@@ -1,7 +1,12 @@
-class Box extends BaseClass {
-  constructor(x, y, width, height){
-    super(x,y,width,height);
-    this.image = loadImage("sprites/wood1.png");
-  }
+//Create Child "Bird" from parent "Base Class"
+//Implement DRY
+  class Box extends BaseClass {
+    constructor(x, y, width, height){
+      var options = {    
+        'density':0.7
+    }
+      super(x,y,width,height);
 
-};
+    }
+
+  };

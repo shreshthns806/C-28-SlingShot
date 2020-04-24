@@ -1,2 +1,2 @@
-# AngryBirdsStage3
-Stage 3 Angry Birds: Introducing Constraint
+# SlingShot Constraints
+Learning constraints through a fun game!
