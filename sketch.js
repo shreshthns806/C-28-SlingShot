@@ -19,9 +19,8 @@ function setup(){
     //Constraint bird with a point.
         sling = new slingShot(bird[count].body,{x:200,y:100});
     //Create 3 platforms, on whic to place boxes.
-        ground1 = new Ground(900,200,100,10)
-        ground2 = new Ground(400,300,150,10)
-        ground3 = new Ground(600,100,140,10)
+        ground1 = new Ground(600,300,1200,10)
+
     //Create 47 boxes
         box1a = new Box(340,185,30,30)
         box2a = new Box(375,185,30,30)
@@ -95,8 +94,6 @@ function draw(){
         sling.display();  
         noStroke()
         ground1.display();
-        ground2.display();
-        ground3.display();
         box1a.display();
         box2a.display();
         box3a.display();
@@ -152,6 +149,18 @@ function draw(){
 //Set the bird's position when mouse is dragged
     function mouseDragged(){
         Body.setPosition(bird[count].body,{x:mouseX,y:mouseY})
+        if(mouseX>350){
+            Body.setPosition(bird[count].body,{x:350,y:mouseY});
+        }
+        if(mouseX<50){
+            Body.setPosition(bird[count].body,{x:50,y:mouseY});
+        }
+        if(mouseY>250){
+            Body.setPosition(bird[count].body,{x:mouseX,y:250});
+        }
+        if(mouseY<50){
+            Body.setPosition(bird[count].body,{x:mouseX,y:50});
+        }
     }
 //Create a new bird every time mouse is pressed
     function mousePressed(){
