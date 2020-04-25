@@ -17,59 +17,73 @@ function setup(){
     //Create first bird, filling the once empty array.
         bird[count] = new Bird(100,100);
     //Constraint bird with a point.
-        sling = new slingShot(bird[count].body,{x:200,y:100});
+        sling = new slingShot(bird[count].body,{x:200,y:50});
     //Create 3 platforms, on whic to place boxes.
-        ground1 = new Ground(600,300,1200,10)
-
+        ground1 = new Ground(700,200,500,10)       
+        ground2 = new Ground(220,350,550,10)
+        
     //Create 47 boxes
-        box1a = new Box(340,185,30,30)
-        box2a = new Box(375,185,30,30)
-        box3a = new Box(410,185,30,30)
-        box4a = new Box(445,185,30,30)
-        box5a = new Box(340,185,30,30)
-        box6a = new Box(375,185,30,30)
-        box7a = new Box(410,185,30,30)
-        box8a = new Box(445,185,30,30)
-        box9a = new Box(340,185,30,30)
-        box10a = new Box(375,185,30,30)
-        box11a = new Box(410,185,30,30)
-        box12a= new Box(445,185,30,30)
-        box1b = new Box(530,0,30,30)
-        box2b = new Box(565,0,30,30)
-        box3b = new Box(600,0,30,30)
-        box4b = new Box(635,0,30,30)
-        box5b = new Box(670,0,30,30)
-        box6b = new Box(705,0,30,30)
-        box7b = new Box(740,0,30,30)
-        box8b = new Box(775,0,30,30)
-        box9b = new Box(810,0,30,30)
-        box10b = new Box(845,0,30,30)
-        box11b = new Box(880,0,30,30)
-        box12b= new Box(915,0,30,30)
-        box12c= new Box(915,0,30,30)
-        box1c = new Box(530,0,30,30)
-        box2c = new Box(565,0,30,30)
-        box3c = new Box(600,0,30,30)
-        box4c = new Box(635,0,30,30)
-        box5c = new Box(670,0,30,30)
-        box6c = new Box(705,0,30,30)
-        box7c = new Box(740,0,30,30)
-        box8c = new Box(775,0,30,30)
-        box9c = new Box(810,0,30,30)
-        box10c = new Box(845,0,30,30)
-        box11c = new Box(880,0,30,30)
-        box12c= new Box(915,0,30,30)
-        box1d = new Box(530,0,30,30)
-        box2d = new Box(565,0,30,30)
-        box3d = new Box(600,0,30,30)
-        box4d = new Box(635,0,30,30)
-        box5d = new Box(670,0,30,30)
-        box6d = new Box(705,0,30,30)
-        box7d = new Box(740,0,30,30)
-        box8d = new Box(775,0,30,30)
-        box9d = new Box(810,0,30,30)
-        box10d = new Box(845,0,30,30)
-        box11d = new Box(880,0,30,30)
+        box1  = new Box(515,0,30,30);
+        box2  = new Box(535,0,30,30);
+        box3  = new Box(555,0,30,30);
+        box4  = new Box(575,0,30,30);
+        box5  = new Box(595,0,30,30);
+        box6  = new Box(615,0,30,30);
+        box7  = new Box(635,0,30,30);
+        box8  = new Box(655,0,30,30);
+        box9  = new Box(675,0,30,30);
+        box10 = new Box(695,0,30,30);
+        box11 = new Box(515,0,30,30);
+        box12 = new Box(535,0,30,30);
+        box13 = new Box(555,0,30,30);
+        box14 = new Box(575,0,30,30);
+        box15 = new Box(595,0,30,30);
+        box16 = new Box(615,0,30,30);
+        box17 = new Box(635,0,30,30);
+        box18 = new Box(655,0,30,30);
+        box19 = new Box(675,0,30,30);
+        box20 = new Box(695,0,30,30);
+        box21 = new Box(515,0,30,30);
+        box22 = new Box(535,0,30,30);
+        box23 = new Box(555,0,30,30);
+        box24 = new Box(575,0,30,30);
+        box25 = new Box(595,0,30,30);
+        box26 = new Box(615,0,30,30);
+        box27 = new Box(635,0,30,30);
+        box28 = new Box(655,0,30,30);
+        box29 = new Box(675,0,30,30);
+        box30 = new Box(695,0,30,30);
+        box32 = new Box(235,130,30,30);
+        box33 = new Box(255,130,30,30);
+        box31 = new Box(215,130,30,30);
+        box34 = new Box(275,130,30,30);
+        box35 = new Box(295,130,30,30);
+        box36 = new Box(315,130,30,30);
+        box37 = new Box(335,130,30,30);
+        box38 = new Box(355,130,30,30);
+        box39 = new Box(375,130,30,30);
+        box40 = new Box(0,0,0,0);
+        box41 = new Box(215,130,30,30);
+        box42 = new Box(235,130,30,30);
+        box43 = new Box(255,130,30,30);
+        box44 = new Box(275,130,30,30);
+        box45 = new Box(295,130,30,30);
+        box46 = new Box(315,130,30,30);
+        box47 = new Box(335,130,30,30);
+        box48 = new Box(355,130,30,30);
+        box49 = new Box(375,130,30,30);
+        box50 = new Box(0,0,0,0);
+        box51 = new Box(215,130,30,30);
+        box52 = new Box(235,130,30,30);
+        box53 = new Box(255,130,30,30);
+        box54 = new Box(275,130,30,30);
+        box55 = new Box(295,130,30,30);
+        box56 = new Box(315,130,30,30);
+        box57 = new Box(335,130,30,30);
+        box58 = new Box(355,130,30,30);
+        box59 = new Box(375,130,30,30);
+        box60 = new Box(0,0,0,0);
+
 }
 function draw(){
     //Draw a black background
@@ -93,54 +107,71 @@ function draw(){
     //Display the variables created from class
         sling.display();  
         noStroke()
-        ground1.display();
-        box1a.display();
-        box2a.display();
-        box3a.display();
-        box4a.display();
-        box5a.display();
-        box6a.display();
-        box7a.display();
-        box8a.display();
-        box9a.display();
-        box10a.display();
-        box11a.display();
-        box12a.display();
-        box1b.display();
-        box2b.display();
-        box3b.display();
-        box4b.display();
-        box5b.display();
-        box6b.display();
-        box7b.display();
-        box8b.display();
-        box9b.display();
-        box10b.display();
-        box11b.display();
-        box12b.display();
-        box1c.display();
-        box2c.display();
-        box3c.display();
-        box4c.display();
-        box5c.display();
-        box6c.display();
-        box7c.display();
-        box8c.display();
-        box9c.display();
-        box10c.display();
-        box11c.display();
-        box12c.display();
-        box1d.display();
-        box2d.display();
-        box3d.display();
-        box4d.display();
-        box5d.display();
-        box6d.display();
-        box7d.display();
-        box8d.display();
-        box9d.display();
-        box10d.display();
-        box11d.display();
+        //Display the grounds
+            ground1.display();
+            ground2.display();   
+        //Display the boxes
+            box1.display(); 
+            box2.display(); 
+            box3.display(); 
+            box4.display(); 
+            box5.display(); 
+            box6.display(); 
+            box7.display(); 
+            box8.display(); 
+            box9.display(); 
+            box10.display();
+            box11.display();
+            box12.display();
+            box13.display();
+            box14.display();
+            box15.display();
+            box16.display();
+            box17.display();
+            box18.display();
+            box19.display();
+            box20.display();
+            box21.display();
+            box22.display();
+            box23.display();
+            box24.display();
+            box25.display();
+            box26.display();
+            box27.display();
+            box28.display();
+            box29.display();
+            box30.display();
+            box31.display();
+            box32.display();
+            box33.display();
+            box34.display();
+            box35.display();
+            box36.display();
+            box37.display();
+            box38.display();
+            box39.display();
+            box40.display();
+            box41.display();
+            box42.display();
+            box43.display();
+            box44.display();
+            box45.display();
+            box46.display();
+            box47.display();
+            box48.display();
+            box49.display();
+            box50.display();
+            box51.display();
+            box52.display();
+            box53.display();
+            box54.display();
+            box55.display();
+            box56.display();
+            box57.display();
+            box58.display();
+            box59.display();
+            box60.display();
+        
 }
 //Detach the bird from constraint
     function mouseReleased(){
@@ -149,18 +180,7 @@ function draw(){
 //Set the bird's position when mouse is dragged
     function mouseDragged(){
         Body.setPosition(bird[count].body,{x:mouseX,y:mouseY})
-        if(mouseX>350){
-            Body.setPosition(bird[count].body,{x:350,y:mouseY});
-        }
-        if(mouseX<50){
-            Body.setPosition(bird[count].body,{x:50,y:mouseY});
-        }
-        if(mouseY>250){
-            Body.setPosition(bird[count].body,{x:mouseX,y:250});
-        }
-        if(mouseY<50){
-            Body.setPosition(bird[count].body,{x:mouseX,y:50});
-        }
+        
     }
 //Create a new bird every time mouse is pressed
     function mousePressed(){
