@@ -91,13 +91,15 @@ function draw(){
     //Update the engine
         Engine.update(engine);
     //Write instruction text for user
+        sling.display();
         strokeWeight(4);
+        noStroke()
         textSize(30);
-        text("Drag and Release to throw Box",15,25)
-        text("If on Mobile, Drag and Release",15,50)
-        text("This works like a catapult",15,100);
-        text("The direction in which you drag, will be like pulling a rubberband",15,130)
-        text("The box is on the rubberband. So it will be launched in the opposite direction",15,155)
+        text("Drag and Release to throw Box",95,25)
+        text("If on Mobile, Drag and Release",95,50)
+        text("This works like a catapult",95,100);
+        text("The direction in which you drag, will be like pulling a rubberband",95,130)
+        text("The box is on the rubberband. So it will be launched in the opposite direction",75,155)
         text("Created by Shreshth Narayan Singh",600,350)
     //Use a for loop to display the bird array
         for(i=0;i<count;i++){
@@ -105,7 +107,8 @@ function draw(){
             bird[count].display();
         }
     //Display the variables created from class
-        sling.display();  
+        
+        console.log(mouseX)  
         noStroke()
         //Display the grounds
             ground1.display();
