@@ -7,7 +7,7 @@
     var engine, world;
 //Create Variables for bird array (currently empty)
     var bird=[];
-    var count=0;
+
 function setup(){
     //Create canvas of width 1200 and height 400.
         var canvas = createCanvas(1200,400);
@@ -15,9 +15,9 @@ function setup(){
         engine = Engine.create();
         world = engine.world;
     //Create first bird, filling the once empty array.
-        bird[count] = new Bird(100,100);
+        bird = new Bird(100,100);
     //Constraint bird with a point.
-        sling = new slingShot(bird[count].body,{x:200,y:50});
+        sling = new slingShot(bird.body,{x:200,y:50});
     //Create 3 platforms, on whic to place boxes.
         ground1 = new Ground(700,100,400,10)       
         ground2 = new Ground(850,350,600,10)
@@ -224,10 +224,9 @@ function draw(){
         text("The box is on the rubberband. So it will be launched in the opposite direction",75,155)
         text("Created by Shreshth Narayan Singh",600,250)
     //Use a for loop to display the bird array
-        for(i=0;i<count;i++){
-            bird[i].display();
-            bird[count].display();
-        }
+
+            bird.display();
+
     //Display the variables created from class
         noStroke()
         //Display the grounds
@@ -374,12 +373,10 @@ function draw(){
     }
 //Set the bird's position when mouse is dragged
     function mouseDragged(){
-        Body.setPosition(bird[count].body,{x:mouseX,y:mouseY})
+        Body.setPosition(bird.body,{x:mouseX,y:mouseY})
         
     }
 //Create a new bird every time mouse is pressed
     function mousePressed(){
-        count++
-        bird[count]=new Bird(100,100)
         sling.attach();
     }

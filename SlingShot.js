@@ -17,7 +17,7 @@ class slingShot{
         this.slingShot.bodyA=null;
     }
     attach(){
-        this.slingShot.bodyA=bird[count].body;
+        this.slingShot.bodyA=bird.body;
     }
     display(){
         image(this.sling1,10,50,150,120)
@@ -26,7 +26,7 @@ class slingShot{
             strokeWeight(4);
             stroke("white")
             if(pointA.x<200){
-            image(this.sling3,pointA.x-100,pointA.y-30,100,100)
+             image(this.sling3,pointA.x-100,pointA.y-30,100,100)
         }else {
             image(this.sling2,pointA.x+50,pointA.y-30,100,100)
         }
